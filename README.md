@@ -101,12 +101,12 @@ Honeybloom/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/honeybloom.git
+   https://github.com/yashodhasanchith/Honey-Bloom-Shop.git
    ```
 
 2. **Navigate to project directory**
    ```bash
-   cd honeybloom
+   cd Honey-Bloom-Shop-main
    ```
 
 3. **Open in browser**
