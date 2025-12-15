@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honey Bloom Flower Shop</title>
+    <link rel="stylesheet" href="Honeybloom.css"/>
+    <link rel="shortcut icon" href="images/icon0.PNG"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- WhatsApp Button Styles -->
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25D366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Section -->
+    <section id="main">
+        <!-- Menu Toggle -->
+        <input type="checkbox" class="menu-btn" id="menu-btn"/>
+
+        <!-- Header -->
+        <header>
+            <div class="header-top">
+                <!-- Mobile Menu Icon -->
+                <label for="menu-btn" class="menu-icon">
+                    <span class="nav-icon"></span>
+                </label>
+
+                <!-- Store Location -->
+                <div class="nav-location">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 400Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Z"/></svg>
+                        Store Locate
+                    </a>
+                </div>
+
+                <!-- Logo -->
+                <a href="#" class="logo">
+                    <img src="images/icon.PNG" alt="logo"/>
+                </a>
+
+                <!-- Navigation Icons -->
+                <div class="nav-btn">
+                    <a href="javascript:void(0);" class="nav-search">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/></svg>
+                    </a>
+                    
+                    <a href="javascript:void(0);" class="nav-user">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z"/></svg>
+                    </a>
+
+                    <a href="javascript:void(0);" class="nav-cart">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"/></svg>
+                        <span class="cart-count">0</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Navigation Menu -->
+            <nav class="navigation">
+                <ul class="menu">
+                    <li><a href="#home.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#category">Category</a>
+                        <div class="dropdown-menu">
+                            <a href="#">Love & Romance</a>
+                            <a href="#">Wedding</a>
+                            <a href="#">Anniversary</a>
+                            <a href="#">Birthday</a>
+                            <a href="#">Congratulations</a>
+                            <a href="#">Get Well Soon</a>
+                        </div>
+                    </li>
+                        <li>
+                        <a href="#popular">Popular</a>
+                        <span class="nav-lable">Hot Offer</span>
+                    </li>
+                    <li><a href="#recent-product">Recent</a></li>
+                    <li><a href="#contact" class="contact-link">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Hero Content -->
+        <div class="main-content">
+            <div class="main-content-text">
+                <strong>Honey Bloom</strong>
+                <h1>The<br> Trusted Choice of Loved Ones</h1>
+                <p>“The Trusted Choice of Loved Ones” is a promise whispered with love, a bond that brings comfort and joy. Every moment shared, every decision made, reflects care and trust. For those we hold dear, this choice embraces hearts, nurtures memories, and shines as a beacon of unwavering devotion.</p>
+                <a href="#popular" class="hero-btn">Shop Now</a>
+            </div>
+
+            <div class="main-content-img">
+                <img src="images/model.png" alt="model">
+            </div>
+        </div>
+    </section>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <div class="search-content">
+            <form class="search-input">
+                <input type="text" name="search" placeholder="Search for flowers, bouquets..." autocomplete="off">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+            <button class="search-cancel" id="searchCancel">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Login/Signup Forms -->
+    <div class="form">
+        <!-- Login Form -->
+        <div class="login-form">
+            <a href="javascript:void(0);" class="form-cancel" id="loginCancel">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </a>
+            <strong>Log In</strong>
+            <form>
+                <input type="email" name="email" placeholder="example@gmail.com" required/>
+                <input type="password" name="password" placeholder="Password" required/>
+                <input type="submit" value="Log In">
+            </form>
+            <div class="form-btns">
+                <a href="#" class="forget">Forget You Password?</a>
+                <a href="javascript:void(0);" class="sign-up-btn">Create Account</a>
+            </div>
+        </div>
+
+        <!-- Sign Up Form -->
+        <div class="sign-up-form">
+            <a href="javascript:void(0);" class="form-cancel" id="signupCancel">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+            </a>
+            <strong>Sign Up</strong>
+            <form>
+                <input type="text" name="fullname" placeholder="Full Name" required/>
+                <input type="email" name="email" placeholder="example@gmail.com" required/>
+                <input type="tel" name="phone" placeholder="Phone number" required/>
+                <input type="password" name="password" placeholder="Password" required/>
+                <input type="submit" value="Sign Up">
+            </form>
+            <div class="form-btns">
+                <a href="javascript:void(0);" class="already-account">Already Have An Account?</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category Section -->
+    <section id="category">
+        <a href="#popular" class="category-box">
+            <div class="category-box-img">
+                <img src="images/c1.png" alt="Annual Flower">
+            </div>
+            <strong>Love & Romance</strong>
+        </a>
+        <a href="#product-3" class="category-box">
+            <div class="category-box-img">
+                <img src="images/c2.png" alt="Perennial Flower">
+            </div>
+            <strong>Wedding</strong>
+        </a>
+        <a href="#product-5" class="category-box">
+            <div class="category-box-img">
+                <img src="images/c3.png" alt="Biennial Flower">
+            </div>
+            <strong>Anniversary</strong>
+        </a>
+        <a href="#product-7" class="category-box">
+            <div class="category-box-img">
+                <img src="images/c4.png" alt="Rose Flower">
+            </div>
+            <strong>Birthday</strong>
+        </a>
+        <a href="#recent-product" class="category-box">
+            <div class="category-box-img">
+                <img src="images/c5.png" alt="Sun Flower">
+            </div>
+            <strong>Congratulations</strong>
+        </a>
+        <a href="#product-15" class="category-box">
+            <div class="category-box-img">
+                <img src="images/c6.png" alt="Hydrangea">
+            </div>
+            <strong>Get Well Soon</strong>
+        </a>
+    </section>
+
+    <!-- Popular Products -->
+    <section id="popular">
+        <h2>Popular Ribbon & Pipe Cleaner Bouquets</h2>
+        <div class="popular-dress-container">
+            <div class="popular-product-container">
+                <!-- Product 1 -->
+                <div class="product-box" id="product-1">
+                    <div class="product-img">
+                        <img src="images/p1.png" alt="Dark Red Bouquets">
+                        <span class="product-label">Best Seller</span>
+                        <button class="product-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                    <div class="product-text">
+                        <span class="product-category">Love & Romance</span>
+                        <h3 class="product-text-title">Dark Red Bouquets</h3>
+                        <div class="product-price">
+                            <span class="current-price">Rs. 3,500</span>
+                            <span class="old-price">Rs. 4,000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-box" id="product-2">
+                    <div class="product-img">
+                        <img src="images/p2.png" alt="Cute Bouquets">
+                        <span class="product-label">-20%</span>
+                        <button class="product-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                    <div class="product-text">
+                        <span class="product-category">Birthday Special</span>
+                        <h3 class="product-text-title">Cute Bouquets</h3>
+                        <div class="product-price">
+                            <span class="current-price">Rs. 3,200</span>
+                            <span class="old-price">Rs. 4,000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-box" id="product-3">
+                    <div class="product-img">
+                        <img src="images/p3.png" alt="Lovely Pink Bouquets">
+                        <button class="product-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                    <div class="product-text">
+                        <span class="product-category">For Her</span>
+                        <h3 class="product-text-title">Lovely Pink Bouquets</h3>
+                        <div class="product-price">
+                            <span class="current-price">Rs. 3,000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-box" id="product-4">
+                    <div class="product-img">
+                        <img src="images/p4.png" alt="Sun Flower & Roses Bouquets">
+                        <span class="product-label">New</span>
+                        <button class="product-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                    <div class="product-text">
+                        <span class="product-category">Sunshine Blooms</span>
+                        <h3 class="product-text-title">Sun Flower & Roses Bouquets</h3>
+                        <div class="product-price">
+                            <span class="current-price">Rs. 1,000</span>
+                            <span class="old-price">Rs. 1,800</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-box" id="product-5">
+                    <div class="product-img">
+                        <img src="images/p5.png" alt="Red & White Roses Bouquets">
+                        <button class="product-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                    <div class="product-text">
+                        <span class="product-category">Forever Love</span>
+                        <h3 class="product-text-title">Red & White Roses Bouquets</h3>
+                        <div class="product-price">
+                            <span class="current-price">Rs. 2,500</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-box" id="product-6">
+                    <div class="product-img">
+                        <img src="images/p6.png" alt="Little Love Bouquets">
+                        <span class="product-label">New</span>
+                        <button class="product-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                    <div class="product-text">
+                        <span class="product-category">Cute Creations</span>
+                        <h3 class="product-text-title">Little Love Bouquets</h3>
+                        <div class="product-price">
+                            <span class="current-price">Rs. 1,500</span>
+                            <span class="old-price">Rs. 2,400</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-box" id="product-7">
+                    <div class="product-img">
+                        <img src="images/p7.png" alt="Roses with Love Bouquets">
+                        <button class="product-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                    <div class="product-text">
+                        <span class="product-category">She'll Love It</span>
+                        <h3 class="product-text-title">Roses with Love Bouquets</h3>
+                        <div class="product-price">
+                            <span class="current-price">Rs. 2,000</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-box" id="product-8">
+                    <div class="product-img">
+                        <img src="images/p8.png" alt="Tulip Bouquets">
+                        <span class="product-label">Popular</span>
+                        <button class="product-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                    <div class="product-text">
+                        <span class="product-category">Little Love Flowers</span>
+                        <h3 class="product-text-title">Tulip Bouquets</h3>
+                        <div class="product-price">
+                            <span class="current-price">Rs. 1,500</span>
+                            <span class="old-price">Rs. 2,500</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-box" id="product-9">
+                    <div class="product-img">
+                        <img src="images/p9.png" alt="Yellow Roses Bouquets">
+                        <span class="product-label">Popular</span>
+                        <button class="product-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                    </div>
+                    <div class="product-text">
+                        <span class="product-category">Crimson Love Bouquet</span>
+                        <h3 class="product-text-title">Yellow Roses Bouquets</h3>
+                        <div class="product-price">
+                            <span class="current-price">Rs. 2,100</span>
+                            <span class="old-price">Rs. 3,000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Banner -->
+            <div class="popular-banner">
+                <div class="popular-banner-text">
+                    <h3>Honey Bloom Shop</h3>
+                    <p>The Trusted Choice of Loved Ones</p>
+                    <a href="#shoping-banner">Shop Now</a>
+                </div>
+                <div class="popular-banner-img">
+                    <img src="images/banner.png" alt="Banner">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Banner -->
+    <section id="shoping-banner">
+        <div class="shoping-banner-container">
+            <div class="shoping-banner-text">
+                <strong>Honey Bloom</strong>
+                <h3>The Trusted Choice of Loved Ones</h3>
+                <p>Honey Bloom lovingly crafts delicate floral creations, from ribbon bouquets to charming pipe cleaner flowers, turning every thoughtful gift into a warm expression of love, care, and cherished moments.</p>
+                <a href="#popular">Shop Now</a>
+            </div>
+            <div class="shoping-banner-img">
+                <img src="images/i.png" alt="banner"/>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Products -->
+    <section id="recent-product">
+        <h2>Recent Flower Bouquets</h2>
+        <div class="recent-product-container">
+            <!-- Product 1 -->
+            <div class="product-box" id="product-10">
+                <div class="product-img">
+                    <img src="images/p10.png" alt="Lovely Bouquets">
+                    <button class="product-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+                <div class="product-text">
+                    <span class="product-category">Handmade Love</span>
+                    <h3 class="product-text-title">Lovely Bouquets</h3>
+                    <div class="product-price">
+                        <span class="current-price">Rs. 2,000</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-box" id="product-11">
+                <div class="product-img">
+                    <img src="images/p11.png" alt="Blue Roses Bouquets">
+                    <span class="product-label">New</span>
+                    <button class="product-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+                <div class="product-text">
+                    <span class="product-category">Elegance in every twist</span>
+                    <h3 class="product-text-title">Blue Roses Bouquets</h3>
+                    <div class="product-price">
+                        <span class="current-price">Rs. 1,800</span>
+                        <span class="old-price">Rs. 2,200</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-box" id="product-12">
+                <div class="product-img">
+                    <img src="images/p12.png" alt="Flower Creativity Bouquets">
+                    <button class="product-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+                <div class="product-text">
+                    <span class="product-category">Little Wonders</span>
+                    <h3 class="product-text-title">Flower Creativity Bouquets</h3>
+                    <div class="product-price">
+                        <span class="current-price">Rs. 1,500</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-box" id="product-13">
+                <div class="product-img">
+                    <img src="images/p13.png" alt="Gentle Pink Roses Bouquets">
+                    <span class="product-label">New</span>
+                    <button class="product-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+                <div class="product-text">
+                    <span class="product-category">Petal Kiss</span>
+                    <h3 class="product-text-title">Gentle Pink Roses Bouquets</h3>
+                    <div class="product-price">
+                        <span class="current-price">Rs. 2,200</span>
+                        <span class="old-price">Rs. 3,000</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-box" id="product-14">
+                <div class="product-img">
+                    <img src="images/p14.png" alt="Cute Roses Bouquets">
+                    <button class="product-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+                <div class="product-text">
+                    <span class="product-category">Mystic Mini Roses</span>
+                    <h3 class="product-text-title">Cute Roses Bouquets</h3>
+                    <div class="product-price">
+                        <span class="current-price">Rs. 1,300</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-box" id="product-15">
+                <div class="product-img">
+                    <img src="images/p15.png" alt="Blue & Purple Roses Bouquets">
+                    <span class="product-label">Popular</span>
+                    <button class="product-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+                <div class="product-text">
+                    <span class="product-category">Perfect for your heartfelt gift</span>
+                    <h3 class="product-text-title">Blue & Purple Roses Bouquets</h3>
+                    <div class="product-price">
+                        <span class="current-price">Rs. 4,700</span>
+                        <span class="old-price">Rs. 6,000</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-box" id="product-16">
+                <div class="product-img">
+                    <img src="images/p16.png" alt="Purple Tulip Bouquetst">
+                    <span class="product-label">Popular</span>
+                    <button class="product-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+                <div class="product-text">
+                    <span class="product-category">Little Wonders</span>
+                    <h3 class="product-text-title">Purple Tulip Bouquets</h3>
+                    <div class="product-price">
+                        <span class="current-price">Rs. 1,000</span>
+                        <span class="old-price">Rs. 1,500</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-box" id="product-17">
+                <div class="product-img">
+                    <img src="images/p17.png" alt="Elegant White Roses Bouquets">
+                    <span class="product-label">Popular</span>
+                    <button class="product-cart-btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+                <div class="product-text">
+                    <span class="product-category">Pure White Bloom</span>
+                    <h3 class="product-text-title">Elegant White Roses Bouquets</h3>
+                    <div class="product-price">
+                        <span class="current-price">Rs. 2,700</span>
+                        <span class="old-price">Rs. 3,500</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <div class="service-box">
+            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#000000"><path d="M229.41-160.67q-49.41 0-84.08-34.61-34.66-34.61-34.66-84.05H40v-454q0-27 19.83-46.84Q79.67-800 106.67-800h572.66v164.67h110l130.67 174v182h-74q0 49.44-34.59 84.05t-84 34.61q-49.41 0-84.08-34.61-34.66-34.61-34.66-84.05H348q0 49.33-34.59 84-34.59 34.66-84 34.66Zm-.08-66.66q21.67 0 36.84-15.17 15.16-15.17 15.16-36.83 0-21.67-15.16-36.84-15.17-15.16-36.84-15.16-21.66 0-36.83 15.16-15.17 15.17-15.17 36.84 0 21.66 15.17 36.83 15.17 15.17 36.83 15.17Zm498 0q21.67 0 36.84-15.17 15.16-15.17 15.16-36.83 0-21.67-15.16-36.84-15.17-15.16-36.84-15.16-21.66 0-36.83 15.16-15.17 15.17-15.17 36.84 0 21.66 15.17 36.83 15.17 15.17 36.83 15.17Zm-48-202.67H860L756-568.67h-76.67V-430Z"/></svg>
+            <span>Free Shipping</span>
+            <p>Free shipping on all orders island-wide</p>
+        </div>
+
+        <div class="service-box">
+            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#000000"><path d="M440-120v-66.67h333.33V-484q0-121.46-85.38-206.06-85.38-84.61-207.95-84.61t-207.95 84.61q-85.38 84.6-85.38 206.06v244H160q-33 0-56.5-23.5T80-320v-80q0-21 10.5-39.5T120-469l3-53q8-68 39.5-126t79-101q47.5-43 109-67T480-840q68 0 129 24t109 66.5Q766-707 797-649t40 126l3 52q19 9 29.5 27t10.5 38v92q0 20-10.5 38T840-249v62.33q0 27.5-19.58 47.09Q800.83-120 773.33-120H440Zm-80.12-286.67q-14.21 0-23.71-9.61-9.5-9.62-9.5-23.84 0-14.21 9.61-23.71 9.62-9.5 23.84-9.5 14.21 0 23.71 9.61 9.5 9.62 9.5 23.84 0 14.21-9.61 23.71-9.62 9.5-23.84 9.5Zm240 0q-14.21 0-23.71-9.61-9.5-9.62-9.5-23.84 0-14.21 9.61-23.71 9.62-9.5 23.84-9.5 14.21 0 23.71 9.61 9.5 9.62 9.5 23.84 0 14.21-9.61 23.71-9.62 9.5-23.84 9.5ZM241-462q-7-106 64-182t177-76q87.67 0 152.83 57.17Q700-605.67 714-519q-89.67-1-164.17-49.67-74.5-48.66-115.02-129.33Q419-618 367.5-555.5T241-462Z"/></svg>
+            <span>Support 24/7</span>
+            <p>We support 24 hours a day</p>
+        </div>
+
+        <div class="service-box">
+            <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#000000"><path d="M164.67-160v-66.67H288l-15.33-12.66q-59-50.34-85.84-109.5Q160-408 160-477.33q0-107.67 63.83-192.84 63.84-85.16 167.5-115.83v69.33q-74 28-119.33 93.84-45.33 65.83-45.33 145.5 0 57 21.33 102.16 21.33 45.17 60 79.84L331.33-278v-115.33H398V-160H164.67Zm404.66-13.33v-70q74.67-28 119.34-93.84 44.66-65.83 44.66-145.5 0-47-21.33-94.16-21.33-47.17-58.67-84.5L630.67-682v115.33h-67.34V-800h233.34v66.67H673.33l15.34 14q56.33 53.66 83.83 115.5Q800-542 800-482.67 800-375 736.5-289.5 673-204 569.33-173.33Z"/></svg>
+            <span>100% Money Back</span>
+            <p>You have 7 days to return your items</p>
+        </div>
+    </section>
+
+    <!-- Footer with Contact Section -->
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-company-box">
+                <a href="#" class="footer-logo">
+                    <img src="images/icon.png" alt="logo"/>
+                </a>
+                <p>Premium floral boutique delivering joy since 2025, with fresh, handcrafted flowers for every occasion, turning moments into heartfelt memories.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-link-box">
+                <strong>Main Link's</strong>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#category">Category</a></li>
+                    <li><a href="#shoping-banner">Shop</a></li>
+                    <li><a href="#popular">Popular</a></li>
+                    <li><a href="#contact" class="contact-link">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-link-box">
+                <strong>Social Link's</strong>
+                <ul>
+                    <li><a href="https://www.facebook.com/share/1C733hFy9F/" target="_blank">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/honeybloomshoop?igsh=bmplbTdjcnhxM2s3" target="_blank">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@honeybloomshoop" target="_blank">Tiktok</a></li>
+                    <li><a href="https://wa.me/94766690980" target="_blank">Whatsapp</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-subscribe">
+                <strong>Subscribe Now</strong>
+                <p>Subscribe to get updates on new arrivals and special offers!</p>
+                <form class="subscribe-box">
+                    <input type="email" placeholder="example@gmail.com" name="subscribe" required/>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <span>Made By Yashodha Sanchith</span>
+            <span>© Copyright 2026 - Honey Bloom Shop</span>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/94766690980?text=Hello%20Honey%20Bloom!%20I'd%20like%20to%20place%20an%20order." 
+       class="whatsapp-float" 
+       target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="Honeybloom.js"></script>
+</body>
+</html>
